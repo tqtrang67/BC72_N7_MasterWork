@@ -228,6 +228,22 @@ li {
 	padding-top: 60px;
 }
 
+.question_header h3 {
+	color: #2c3038;
+	font-size: 46px;
+	line-height: 1;
+	font-weight: 700;
+}
+
+.question_header p {
+	max-width: 750px;
+	color: #5a5a5a;
+	font-size: 16px;
+	line-height: 22.5px;
+	font-weight: 400;
+	margin: auto;
+}
+
 .question .row {
 	padding-bottom: 40px;
 }
