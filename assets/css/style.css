@@ -83,14 +83,19 @@ li {
 	border: 1px solid #eee;
 }
 
+.btn_mode {
+	font-size: 24px;
+}
+
+.navbar .dropdown-menu {
+	z-index: 1000;
+}
+
 /* content */
 
 .content {
-	margin-top: 40px;
-
 	background: linear-gradient(to right, #ccc, rgba(255, 255, 255, 0.92)),
 		url(../img/banner.jpg);
-
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
@@ -415,4 +420,118 @@ li {
 .content_featured .resp-tab-content {
 	border: none;
 	padding-top: 24px;
+}
+
+/* light themes */
+#myBody {
+	background-color: white;
+}
+
+#switchButton {
+	background: none;
+	border: none;
+	padding: 0;
+	color: black;
+}
+
+#switchButton .fa-sun {
+	display: none;
+}
+
+#switchButton .fa-moon {
+	display: block;
+}
+
+/* Dark Theme */
+.dark#myBody,
+.dark .about,
+.dark .question,
+.dark .featured {
+	background-color: #131617 !important;
+}
+
+.dark h3 {
+	color: #eee !important;
+}
+
+.dark p {
+	color: #b7b7b7 !important;
+}
+
+.dark header,
+.dark .main_header a {
+	background-color: #131617;
+	color: #fff !important;
+}
+
+.dark .content {
+	background: linear-gradient(to right, #131617, rgba(255, 255, 255, 0.92)),
+		url(../img/banner.jpg);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fff !important ;
+}
+/* dark business */
+.dark .business_item {
+	background-color: #191c1d;
+	border: 1px solid #191c1d;
+}
+
+.dark .business_item:hover {
+	background-color: #131617;
+}
+
+/* dark about */
+
+.dark .about_item {
+	background-color: #131617;
+}
+
+.dark .about_item .counter {
+	color: #dc4f72 !important;
+}
+
+/* dark question */
+
+.dark .faq_question li {
+	background-color: #131617;
+}
+
+.dark .faq_question li h2 {
+	color: #eee;
+}
+
+.dark .faq_question li i::before,
+.dark .faq_question li i::after {
+	background-color: #eee;
+}
+
+/* dark featured */
+
+.dark .content_featured .resp-tab-item,
+.dark .content_featured .resp-tabs-container {
+	background-color: #131617;
+	color: #eee !important;
+}
+
+.dark input {
+	color: white;
+	border: 1px solid #131617;
+}
+.dark #switchButton {
+	background: none;
+	border: none;
+}
+
+.dark #switchButton .fa-sun {
+	display: block;
+	color: white;
+}
+
+.dark #switchButton .fa-moon {
+	display: none;
 }

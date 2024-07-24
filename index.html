@@ -28,8 +28,8 @@
 		<!-- link css -->
 		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
-	<body>
-		<header class="main_header fixed_top">
+	<body id="myBody">
+		<header class="main_header">
 			<div class="container">
 				<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container-fluid">
@@ -37,6 +37,7 @@
 							<i class="fa-solid fa-handshake"></i>
 							Masterwork
 						</h1>
+
 						<div
 							class="collapse navbar-collapse justify-content-end"
 							id="navbarSupportedContent"
@@ -103,7 +104,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="dark_night"></div>
+					<div class="mode">
+						<button class="btn_mode" id="switchButton">
+							<i class="far fa-moon"></i>
+							<i class="far fa-sun"></i>
+						</button>
+					</div>
 				</nav>
 			</div>
 		</header>
@@ -217,7 +223,7 @@
 				<div class="row d-flex justify-content-center flex-wrap mt-5">
 					<div class="col-lg-4 col-sm-6">
 						<div class="about_item">
-							<h4>Happy Customers</h4>
+							<h3>Happy Customers</h3>
 							<p class="counter">10459</p>
 							<p>
 								Lorem ipsum dolor, sit amet consectetur
@@ -227,7 +233,7 @@
 					</div>
 					<div class="col-lg-4 col-sm-6">
 						<div class="about_item">
-							<h4>Winning Awards</h4>
+							<h3>Winning Awards</h3>
 							<p class="counter">890</p>
 							<p>
 								Lorem ipsum dolor, sit amet consectetur
@@ -237,7 +243,7 @@
 					</div>
 					<div class="col-lg-4 col-sm-6">
 						<div class="about_item">
-							<h4>Completed Projects</h4>
+							<h3>Completed Projects</h3>
 							<p class="counter">5345</p>
 							<p>
 								Lorem ipsum dolor, sit amet consectetur
@@ -548,5 +554,8 @@
 		<script>
 			$("#horizontalTab").easyResponsiveTabs();
 		</script>
+
+		<!-- file js -->
+		<script src="./index.js"></script>
 	</body>
 </html>
