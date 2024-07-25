@@ -54,6 +54,13 @@ li {
 .main_header {
 	background-color: #fff;
 	height: 100%;
+	height: auto;
+	/* padding: 4px 0; */
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
 }
 
 .navbar .navbar-brand {
@@ -63,11 +70,46 @@ li {
 	color: #dc4f72;
 }
 
+.navbar-light .navbar-brand:hover {
+	color: #dc4f72;
+}
+
 .navbar .nav-item .nav-link {
 	transition: all 0.5s ease;
 	padding: 14px 14px;
 	font-size: 16px;
 	font-weight: 400;
+}
+
+.navbar .nav-item {
+	position: relative;
+	transition: 0.5s;
+}
+
+.nav-item .nav-link::before,
+.nav-item .dropdown-menu li .dropdown-item::before {
+	position: absolute;
+	content: "";
+	background-color: #dc4f72;
+	width: 0px;
+	height: 2px;
+	bottom: 13px;
+	transition: 0.5s;
+}
+
+.navbar .nav-item .nav-link:hover {
+	color: #dc4f72;
+}
+
+.navbar .nav-item:hover .nav-link::before {
+	width: 20px;
+}
+
+.nav-item .dropdown-menu .ull:hover .dropdown-item::before {
+	width: 20px;
+}
+.nav-item .active {
+	color: #dc4f72 !important;
 }
 
 .search a i {
@@ -83,17 +125,61 @@ li {
 	border: 1px solid #eee;
 }
 
+.search a i:hover {
+	color: #000;
+	opacity: 1;
+}
 .btn_mode {
 	font-size: 24px;
 }
 
-.navbar .dropdown-menu {
-	z-index: 1000;
+.search .search_ovelay {
+	position: fixed;
+	top: 0px;
+	left: 0;
+	right: 0;
+	transition: 0.3s;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9999;
+	background-color: #000;
+	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+	height: 100%;
+	width: 100%;
 }
 
+.search .search_ovelay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.search .popup {
+	position: relative;
+	margin: 0rem auto;
+	padding: 15px;
+	top: 50%;
+	max-width: 600px;
+}
+
+.navbar-nav .dropdown-menu:before {
+	content: "";
+	width: 14px;
+	height: 14px;
+	background-color: #fff;
+	border: 1px solid #b7b7b7;
+	display: block;
+	border-right: none;
+	border-bottom: none;
+	transform: translateX(-50%) rotateZ(45deg);
+	position: absolute;
+	top: -7px;
+	left: 49%;
+	z-index: 1001;
+}
 /* content */
 
 .content {
+	margin-top: 90px;
 	background: linear-gradient(to right, #ccc, rgba(255, 255, 255, 0.92)),
 		url(../img/banner.jpg);
 	position: relative;
