@@ -209,6 +209,7 @@ li {
 
 .header_business {
 	max-width: 750px;
+	padding-top: 24px;
 }
 .header_business h3 {
 	color: #2c3038;
