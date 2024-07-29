@@ -316,13 +316,38 @@ li {
 }
 
 /* resolution */
-resolution {
-	background-image: url(../img/bg.jpg);
-	background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.33));
+.resolution {
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.33)), url(../img/bg.jpg);
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-size: cover;
+	align-items: center;
+	height: 480px;
+	width: 100%;
+	padding: 2rem 0;
 }
 
+.resolution .col-5 {
+	width: 580px;
+}
+
+.resolution .btn-light {
+	background-color: white;
+	border-color: white;
+	color: black;
+	transition: all 0.5s
+}
+
+.resolution .container .row .col-5 p {
+	color: white !important;
+
+}
+
+.resolution .btn-light:hover {
+	background-color: #e2e6ea;
+	border-color: #e2e6ea;
+	color: #212529;
+}
 
 /* question */
 .question {
