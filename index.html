@@ -67,7 +67,7 @@
 								</ul>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link" href="#footer">Contact</a>
 							</li>
 						</ul>
 						<div class="search">
@@ -591,10 +591,73 @@
 		</div>
 	</section>
 	<!-- footer -->
-	<footer>
-		<div class="container"></div>
-	</footer>
+	<footer class="py-5" id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-2 mb-3">
+					<h5>Meta</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Log In</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Entries Feed</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Comments Feed</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">WordPress.Org</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md-2 mb-3">
+					<h5>Categories</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Business</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Design</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Industry</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Programming</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md-2 mb-3">
+					<h5>Archives</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">March 2021</a></li>
 
+					</ul>
+				</div>
+				<div class="col-md-5 offset-md-1 mb-3">
+					<h5>Newsletter</h5>
+					<form class="footer__tag">
+						<p class="contact__form">Get latest updates and offers.</p>
+						<div class="d-flex flex-column flex-sm-row w-100 gap-2">
+							<!-- <label for="newsletter1" class="visually-hidden">Email address</label> -->
+							<input id="email" type="email" class="form-control" placeholder="Email address">
+							<button class="btn btn-primary" type="button">Go</button>
+						</div>
+						<p class="mt-3">Sign up for our latest news & articles. We won’t give you spam mails.</p>
+					</form>
+				</div>
+			</div>
+			<div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+				<p>© 2024 Masterwork. All Rights Reserved | WordPress Theme by W3Layouts.</p>
+				<ul class="list-unstyled d-flex">
+					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#facebook"><i class="fab fa-facebook-f"></i></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#linkedin"><i class="fab fa-linkedin-in"></i></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#twitter"><i class="fab fa-twitter"></i></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#googleplus"><i class="fab fa-google-plus-g"></i></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#github"><i class="fab fa-github"></i></use>
+							</svg></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- Back to top -->
+	<a href="#" class="BackToTop cd-top text-replace js-cd-top">
+		<i class="fa fa-angle-up"></i>
+	</a>
 	<!-- jquery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
 		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -635,7 +698,7 @@
 					items: 1
 				},
 				600: {
-					items: 2
+					items: 1
 				},
 				1000: {
 					items: 2
@@ -643,8 +706,9 @@
 			}
 		})
 	</script>
-
-
+	<!-- Back to top -->
+	<script src="./BTT/util.js"></script>
+	<script src="./BTT/main_btt.js"></script>
 
 	<!-- file js -->
 	<script src="./index.js"></script>
