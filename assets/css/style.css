@@ -108,6 +108,7 @@ li {
 .nav-item .dropdown-menu .ull:hover .dropdown-item::before {
 	width: 20px;
 }
+
 .nav-item .active {
 	color: #dc4f72 !important;
 }
@@ -129,6 +130,7 @@ li {
 	color: #000;
 	opacity: 1;
 }
+
 .btn_mode {
 	font-size: 24px;
 }
@@ -176,6 +178,7 @@ li {
 	left: 49%;
 	z-index: 1001;
 }
+
 /* content */
 
 .content {
@@ -211,6 +214,7 @@ li {
 	max-width: 750px;
 	padding-top: 24px;
 }
+
 .header_business h3 {
 	color: #2c3038;
 	font-size: 46px;
@@ -309,6 +313,40 @@ li {
 	font-size: 16px;
 	color: #5a5a5a;
 	line-height: 24px;
+}
+
+/* resolution */
+.resolution {
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.33)), url(../img/bg.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-items: center;
+	height: 480px;
+	width: 100%;
+	padding: 2rem 0;
+}
+
+.resolution .col-5 {
+	width: 580px;
+}
+
+.resolution .btn-light {
+	background-color: white;
+	border-color: white;
+	color: black;
+	transition: all 0.5s
+}
+
+.resolution .container .row .col-5 p {
+	color: white !important;
+
+}
+
+.resolution .btn-light:hover {
+	background-color: #e2e6ea;
+	border-color: #e2e6ea;
+	color: #212529;
 }
 
 /* question */
@@ -416,7 +454,7 @@ li {
 	transition: 0.3s;
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ p {
+.faq_question ul li input[type="checkbox"]:checked~p {
 	margin-top: 0;
 	max-height: 0;
 	opacity: 0;
@@ -424,11 +462,11 @@ li {
 	transform: translate(0, 50%);
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ i::before {
+.faq_question ul li input[type="checkbox"]:checked~i::before {
 	transform: translate(2px, 0) rotate(45deg);
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ i::after {
+.faq_question ul li input[type="checkbox"]:checked~i::after {
 	transform: translate(-2px, 0) rotate(-45deg);
 }
 
@@ -482,6 +520,7 @@ li {
 #horizontalTab {
 	display: block;
 }
+
 .content_featured .resp-tabs-list li {
 	font-weight: 700;
 	font-size: 22px;
@@ -560,8 +599,9 @@ li {
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
-	color: #fff !important ;
+	color: #fff !important;
 }
+
 /* dark business */
 .dark .business_item {
 	background-color: #191c1d;
@@ -609,6 +649,7 @@ li {
 	color: white;
 	border: 1px solid #131617;
 }
+
 .dark #switchButton {
 	background: none;
 	border: none;
