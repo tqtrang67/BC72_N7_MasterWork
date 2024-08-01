@@ -316,6 +316,44 @@ li {
 	line-height: 24px;
 }
 
+/* resolution */
+.resolution {
+	background: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.7),
+			rgba(0, 0, 0, 0.33)
+		),
+		url(../img/bg.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-items: center;
+	height: 480px;
+	width: 100%;
+	padding: 2rem 0;
+}
+
+.resolution .col-5 {
+	width: 580px;
+}
+
+.resolution .btn-light {
+	background-color: white;
+	border-color: white;
+	color: black;
+	transition: all 0.5s;
+}
+
+.resolution .container .row .col-5 p {
+	color: white !important;
+}
+
+.resolution .btn-light:hover {
+	background-color: #e2e6ea;
+	border-color: #e2e6ea;
+	color: #212529;
+}
+
 /* question */
 .question {
 	background-color: #f7f9fc;
@@ -421,7 +459,7 @@ li {
 	transition: 0.3s;
 }
 
-.faq_question ul li input[type="checkbox"]:checked~p {
+.faq_question ul li input[type="checkbox"]:checked ~ p {
 	margin-top: 0;
 	max-height: 0;
 	opacity: 0;
@@ -429,11 +467,11 @@ li {
 	transform: translate(0, 50%);
 }
 
-.faq_question ul li input[type="checkbox"]:checked~i::before {
+.faq_question ul li input[type="checkbox"]:checked ~ i::before {
 	transform: translate(2px, 0) rotate(45deg);
 }
 
-.faq_question ul li input[type="checkbox"]:checked~i::after {
+.faq_question ul li input[type="checkbox"]:checked ~ i::after {
 	transform: translate(-2px, 0) rotate(-45deg);
 }
 
@@ -677,7 +715,7 @@ li {
 
 .testimonials .message i {
 	font-size: 35px;
-	color: #2C3038;
+	color: #2c3038;
 	opacity: 0.2;
 	position: absolute;
 	top: 0px;
@@ -708,7 +746,7 @@ li {
 	background: #fff;
 	display: block;
 	border: none;
-	transition: opacity .2s ease;
+	transition: opacity 0.2s ease;
 	border-radius: 0;
 	position: relative;
 }
@@ -737,7 +775,7 @@ li {
 
 /* footer */
 footer {
-	background: #F7F9FC;
+	background: #f7f9fc;
 	margin-bottom: 25px;
 }
 
@@ -751,7 +789,7 @@ footer {
 footer .container h5 {
 	font-size: 20px;
 	line-height: 25px;
-	color: #2C3038;
+	color: #2c3038;
 	margin-bottom: 30px;
 	font-weight: 700;
 }
@@ -763,14 +801,13 @@ footer .form-control {
 	font-size: 16px;
 	outline: none;
 	width: 78%;
-	color: #2C3038;
+	color: #2c3038;
 	font-weight: 600;
 	border-radius: 6px;
 }
 
 footer .footer__tag input {
 	line-height: 16px;
-
 }
 
 footer .footer__tag button {
