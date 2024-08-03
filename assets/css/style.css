@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
 }
 
 /* class dùng chung  */
@@ -49,6 +50,10 @@ li {
 .img_top:hover {
 	transform: translateY(-0.5rem);
 	transition: 0.3s;
+}
+
+.container {
+	width: 80%;
 }
 
 /* header */
@@ -318,19 +323,22 @@ li {
 
 /* resolution */
 .resolution {
-	background: linear-gradient(
-			to right,
+	background: linear-gradient(to right,
 			rgba(0, 0, 0, 0.7),
-			rgba(0, 0, 0, 0.33)
-		),
+			rgba(0, 0, 0, 0.33)),
 		url(../img/bg.jpg);
+	background-position-y: 50%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	align-items: center;
-	height: 480px;
-	width: 100%;
+	min-height: 480px;
+	/* width: 100%; */
 	padding: 2rem 0;
+}
+
+.resolution h2.mb-4 {
+	font-weight: 700;
 }
 
 .resolution .col-5 {
@@ -459,7 +467,7 @@ li {
 	transition: 0.3s;
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ p {
+.faq_question ul li input[type="checkbox"]:checked~p {
 	margin-top: 0;
 	max-height: 0;
 	opacity: 0;
@@ -467,11 +475,11 @@ li {
 	transform: translate(0, 50%);
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ i::before {
+.faq_question ul li input[type="checkbox"]:checked~i::before {
 	transform: translate(2px, 0) rotate(45deg);
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ i::after {
+.faq_question ul li input[type="checkbox"]:checked~i::after {
 	transform: translate(-2px, 0) rotate(-45deg);
 }
 
@@ -678,6 +686,7 @@ li {
 	background-repeat: no-repeat, no-repeat, no-repeat;
 	background-position: center;
 	background-attachment: fixed;
+	margin-top: 90px;
 }
 
 .testimonials .slider-info {
@@ -755,6 +764,28 @@ li {
 	background: #dc4f72;
 }
 
+/* dark testimonials */
+
+.dark .testimonials {
+	background: linear-gradient(to right, #131617, rgba(255, 255, 255, 0.77)), url(https://wp.w3layouts.com/masterwork/wp-content/themes/masterwork/assets/images/b2.jpg) !important;
+}
+
+.dark .testimonials .slider-info {
+	background-color: #131617;
+}
+
+.dark .testimonials .message p {
+	color: white !important;
+}
+
+.dark .owl-theme .owl-dots .owl-dot span {
+	background: #131617;
+}
+
+.dark .owl-theme .owl-dots .owl-dot.active span {
+	background: #dc4f72;
+}
+
 /* build */
 .build .header_featured {
 	width: 750px;
@@ -827,20 +858,46 @@ footer .contact__form {
 	margin-bottom: 30px;
 }
 
-/* footer ul.list-unstyled li a {
+.footer__txt li {
 	color: #2C3038;
-	/* width: 36px;
-	height: 36px; */
-/* line-height: 36px;
-display: inline-block;
-border-radius: 50%;
-text-align: center;
-margin-right: 20px;
-} */
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	display: inline-block;
+	border-radius: 50%;
+	text-align: center;
+}
 
-/* footer ul.list-unstyled li i {
-	padding: -36px;
-} */
+.footer__txt li i {
+	font-size: 15px;
+	line-height: 36px;
+}
+
+/* dark footer */
+
+.dark footer {
+	background-color: #191c1d;
+}
+
+.dark footer .container h5 {
+	color: #eee;
+}
+
+.dark .footer__tag {
+	background-color: #131617;
+}
+
+.dark footer .form-control {
+	background: #191c1d;
+}
+
+.dark footer .contact__form {
+	color: #eee !important;
+}
+
+.dark footer ul li i {
+	color: #eee;
+}
 
 /* back to top */
 
