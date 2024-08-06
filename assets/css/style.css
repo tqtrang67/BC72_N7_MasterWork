@@ -2,7 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 }
 
 /* class dùng chung  */
@@ -150,7 +150,7 @@ li {
 	visibility: hidden;
 	opacity: 0;
 	z-index: 9999;
-	background-color: #000;
+	background-color: #000000ba;
 	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
 	height: 100%;
 	width: 100%;
@@ -161,12 +161,53 @@ li {
 	opacity: 1;
 }
 
-.search .popup {
+.search_ovelay .popup {
 	position: relative;
 	margin: 0rem auto;
 	padding: 15px;
 	top: 50%;
 	max-width: 600px;
+}
+.search .popup form input[type="search"] {
+	font-size: 16px;
+	line-height: 25px;
+	color: #b7b7b7;
+	height: 55px;
+	padding: 15px 20px 12px;
+	background: #131617;
+	width: 100%;
+	border: 1px solid #333;
+	border-radius: 0;
+	border-bottom-left-radius: 6px;
+	border-top-left-radius: 6px;
+	border-right: none;
+}
+
+.search .popup form .btn {
+	font-size: 17px;
+	line-height: 28px;
+	text-align: center;
+	color: #f5f9fc;
+	font-weight: 500;
+	height: 55px;
+	border: none;
+	background: #dc4f72;
+	padding: 0 25px;
+	border-left: none;
+	border-radius: initial;
+	border-bottom-right-radius: 6px;
+	border-top-right-radius: 6px;
+}
+.search .popup .close {
+	position: absolute;
+	right: 20px;
+	top: -50px;
+	transition: all 200ms;
+	font-size: 30px;
+	text-decoration: none;
+	color: #fff;
+	opacity: 0.7;
+	background: none;
 }
 
 .navbar-nav .dropdown-menu:before {
@@ -189,7 +230,7 @@ li {
 
 .content {
 	margin-top: 90px;
-	background: linear-gradient(to right, #ccc, rgba(255, 255, 255, 0.92)),
+	background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.92)),
 		url(../img/banner.jpg);
 	position: relative;
 	z-index: 1;
@@ -199,14 +240,14 @@ li {
 	background-size: cover;
 }
 
-.row .col-6 h3 {
+.content .content_title {
 	font-size: 50px;
 	line-height: 57.5px;
 	color: #2c3038;
 	font-weight: 700;
 }
 
-.row .col-6 p {
+.content .content_des {
 	font-size: 20px;
 	line-height: 28px;
 	font-weight: 400;
@@ -299,7 +340,7 @@ li {
 	box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);
 }
 
-.about_item h4 {
+.about_item h3 {
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: 700;
@@ -323,9 +364,11 @@ li {
 
 /* resolution */
 .resolution {
-	background: linear-gradient(to right,
+	background: linear-gradient(
+			to right,
 			rgba(0, 0, 0, 0.7),
-			rgba(0, 0, 0, 0.33)),
+			rgba(0, 0, 0, 0.33)
+		),
 		url(../img/bg.jpg);
 	background-position-y: 50%;
 	background-attachment: fixed;
@@ -467,7 +510,7 @@ li {
 	transition: 0.3s;
 }
 
-.faq_question ul li input[type="checkbox"]:checked~p {
+.faq_question ul li input[type="checkbox"]:checked ~ p {
 	margin-top: 0;
 	max-height: 0;
 	opacity: 0;
@@ -475,11 +518,11 @@ li {
 	transform: translate(0, 50%);
 }
 
-.faq_question ul li input[type="checkbox"]:checked~i::before {
+.faq_question ul li input[type="checkbox"]:checked ~ i::before {
 	transform: translate(2px, 0) rotate(45deg);
 }
 
-.faq_question ul li input[type="checkbox"]:checked~i::after {
+.faq_question ul li input[type="checkbox"]:checked ~ i::after {
 	transform: translate(-2px, 0) rotate(-45deg);
 }
 
@@ -537,7 +580,6 @@ li {
 .content_featured .resp-tabs-list li {
 	font-weight: 700;
 	font-size: 22px;
-	padding: 15px;
 	margin: 0;
 	cursor: pointer;
 	width: 33.333%;
@@ -548,6 +590,13 @@ li {
 	border-left: none;
 	border-right: none;
 	border-bottom: 3px solid #ccc;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
 }
 
 .content_featured .resp-tab-active {
@@ -767,7 +816,8 @@ li {
 /* dark testimonials */
 
 .dark .testimonials {
-	background: linear-gradient(to right, #131617, rgba(255, 255, 255, 0.77)), url(https://wp.w3layouts.com/masterwork/wp-content/themes/masterwork/assets/images/b2.jpg) !important;
+	background: linear-gradient(to right, #131617, rgba(255, 255, 255, 0.77)),
+		url(https://wp.w3layouts.com/masterwork/wp-content/themes/masterwork/assets/images/b2.jpg) !important;
 }
 
 .dark .testimonials .slider-info {
@@ -859,7 +909,7 @@ footer .contact__form {
 }
 
 .footer__txt li {
-	color: #2C3038;
+	color: #2c3038;
 	width: 36px;
 	height: 36px;
 	line-height: 36px;
@@ -931,4 +981,34 @@ footer .contact__form {
 .BackToTop:hover {
 	color: #fff;
 	opacity: 1;
+}
+
+/* responsive */
+
+@media (min-width: 576px) and (max-width: 991px) {
+}
+
+@media (max-width: 992px) {
+	.navbar-nav {
+		float: left;
+		text-align: center;
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	.search {
+		text-align: center;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	.header_button {
+		text-align: center;
+	}
+	.navbar-toggler {
+		line-height: 1.2em;
+		line-height: 34px;
+		background-color: #dc4f72;
+		border-radius: 5px;
+	}
 }
