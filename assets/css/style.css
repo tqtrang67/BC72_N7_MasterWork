@@ -102,6 +102,7 @@ header.nav-fixed {
 	color: #5a5a5a;
 	opacity: 0.95;
 }
+
 .navbar .nav-item {
 	position: relative;
 	transition: 0.5s;
@@ -218,6 +219,7 @@ a.dropdown-item:hover::before {
 	top: 50%;
 	max-width: 600px;
 }
+
 .search .popup form input[type="search"] {
 	font-size: 16px;
 	line-height: 25px;
@@ -248,6 +250,7 @@ a.dropdown-item:hover::before {
 	border-bottom-right-radius: 6px;
 	border-top-right-radius: 6px;
 }
+
 .search .popup .close {
 	position: absolute;
 	right: 20px;
@@ -398,11 +401,9 @@ a.dropdown-item:hover::before {
 
 /* resolution */
 .resolution {
-	background: linear-gradient(
-			to right,
+	background: linear-gradient(to right,
 			rgba(0, 0, 0, 0.7),
-			rgba(0, 0, 0, 0.33)
-		),
+			rgba(0, 0, 0, 0.33)),
 		url(../img/bg.jpg);
 	background-position-y: 50%;
 	background-attachment: fixed;
@@ -544,7 +545,7 @@ a.dropdown-item:hover::before {
 	transition: 0.3s;
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ p {
+.faq_question ul li input[type="checkbox"]:checked~p {
 	margin-top: 0;
 	max-height: 0;
 	opacity: 0;
@@ -552,11 +553,11 @@ a.dropdown-item:hover::before {
 	transform: translate(0, 50%);
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ i::before {
+.faq_question ul li input[type="checkbox"]:checked~i::before {
 	transform: translate(2px, 0) rotate(45deg);
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ i::after {
+.faq_question ul li input[type="checkbox"]:checked~i::after {
 	transform: translate(-2px, 0) rotate(-45deg);
 }
 
@@ -709,6 +710,7 @@ a.dropdown-item:hover::before {
 	border: 1px solid #333;
 	color: #b7b7b7;
 }
+
 .dark .dropdown-menu::before {
 	background-color: #131617;
 	box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);
@@ -735,6 +737,7 @@ a.dropdown-item:hover::before {
 .dark #switchButton .fa-moon {
 	display: none;
 }
+
 /* dark content */
 .dark .content {
 	background: linear-gradient(to right, #131617, rgba(255, 255, 255, 0.92)),
@@ -747,6 +750,7 @@ a.dropdown-item:hover::before {
 	background-size: cover;
 	color: #fff !important;
 }
+
 /* dark business */
 .dark .business_item {
 	background-color: #191c1d;
@@ -964,6 +968,12 @@ footer .form-control {
 	border-radius: 6px;
 }
 
+footer .form-control:focus {
+	outline: none;
+	box-shadow: none;
+	background: #f7f9fc;
+}
+
 footer .footer__tag input {
 	line-height: 16px;
 }
@@ -1101,6 +1111,7 @@ footer .container .forhover:hover {
 		right: 90px;
 		top: 20px;
 	}
+
 	.navbar-nav {
 		float: left;
 		text-align: center;
@@ -1117,6 +1128,7 @@ footer .container .forhover:hover {
 	.header_button {
 		text-align: center;
 	}
+
 	.navbar-toggler {
 		line-height: 1.2em;
 		line-height: 34px;
