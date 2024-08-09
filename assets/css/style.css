@@ -882,6 +882,10 @@ a.dropdown-item:hover::before {
 	background: #dc4f72;
 }
 
+.owl-theme .owl-dots .owl-dot:hover span {
+	background: #dc4f72;
+}
+
 /* dark testimonials */
 
 .dark .testimonials {
@@ -903,6 +907,10 @@ a.dropdown-item:hover::before {
 
 .dark .owl-theme .owl-dots .owl-dot.active span {
 	background: #dc4f72;
+}
+
+.dark .fa-quote-left:before {
+	color: #eee;
 }
 
 /* build */
@@ -992,6 +1000,14 @@ footer .contact__form {
 	line-height: 36px;
 }
 
+footer .container .forhover {
+	transition: all 0.5s;
+}
+
+footer .container .forhover:hover {
+	color: #dc4f72 !important;
+}
+
 /* dark footer */
 
 .dark footer {
@@ -1016,6 +1032,11 @@ footer .contact__form {
 
 .dark footer ul li i {
 	color: #eee;
+	transition: all 0.5s;
+}
+
+.dark footer ul li i:hover {
+	color: #dc4f72 !important;
 }
 
 /* back to top */
