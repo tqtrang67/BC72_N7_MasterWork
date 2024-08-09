@@ -1,19 +1,28 @@
-// const toggle = document.getElementById("toggleDark");
-// const body = document.querySelector("body");
-
-// toggle.addEventListener("click", function () {
-// 	this.classList.toggle("fa-sun");
-// 	if (this.classList.toggle("fa-moon")) {
-// 		body.style.backgroundColor = "white";
-// 		body.style.color = "black";
-// 		body.style.transition = "2s";
-// 	} else {
-// 		body.style.backgroundColor = "black";
-// 		body.style.color = "white";
-// 		body.style.transition = "2s";
-// 	}
-// });
-
 document.getElementById("switchButton").onclick = function () {
 	document.getElementById("myBody").classList.toggle("dark");
 };
+
+$(window).on("scroll", function () {
+	var scroll = $(window).scrollTop();
+
+	if (scroll >= 80) {
+		$("#site-header").addClass("nav-fixed");
+	} else {
+		$("#site-header").removeClass("nav-fixed");
+	}
+});
+
+//Main navigation Active Class Add Remove
+$(".navbar-toggler").on("click", function () {
+	$("header").toggleClass("active");
+});
+$(document).on("ready", function () {
+	if ($(window).width() > 991) {
+		$("header").removeClass("active");
+	}
+	$(window).on("resize", function () {
+		if ($(window).width() > 991) {
+			$("header").removeClass("active");
+		}
+	});
+});

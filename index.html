@@ -1,751 +1,956 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MasterWork</title>
+		<!-- link bs5 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<!-- link font  -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>MasterWork</title>
-	<!-- link bs5 -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-	<!-- link font  -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- link gg fornt -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+			rel="stylesheet"
+		/>
 
-	<!-- link gg fornt -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-		rel="stylesheet">
+		<!-- Link easy-responsive -->
 
-	<!-- Link easy-responsive -->
-	<link rel="stylesheet" href="./Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css" />
+		<link
+			rel="stylesheet"
+			href="./Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css"
+		/>
 
-	<!-- owl-carousel -->
-	<link rel="stylesheet" href="./owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="./owl-carousel/owl.theme.default.min.css">
+		<!-- owl-carousel -->
+		<link rel="stylesheet" href="./owl-carousel/owl.carousel.min.css" />
+		<link
+			rel="stylesheet"
+			href="./owl-carousel/owl.theme.default.min.css"
+		/>
 
-	<!-- link css -->
-	<link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+		<!-- link css -->
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
 
-<body id="myBody">
-	<header class="main_header">
-		<div class="container">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container-fluid">
-					<h1 class="navbar-brand" href="#!">
-						<i class="fa-solid fa-handshake"></i>
-						Masterwork
-					</h1>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-						aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-						<ul class="navbar-nav mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Services</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-									data-bs-toggle="dropdown" aria-expanded="false">
-									Pages
-								</a>
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<li class="ull">
-										<a class="dropdown-item" href="#">Blog Posts</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">Landing page</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">404 page</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#footer">Contact</a>
-							</li>
-						</ul>
-						<div class="search">
-							<a href="#!">
-								<i class="fa-solid fa-magnifying-glass"></i>
-							</a>
-							<div id="form_search" class="search_ovelay">
-								<div class="popup">
-									<form method="GET" class="search-box d-sm-flex">
-										<input type="search" placeholder="Enter Keyword" name="s" required="required"
-											autofocus="" />
-										<button type="submit" class="btn">
-											Search
-										</button>
-									</form>
-									<a class="close" href="#close">×</a>
-								</div>
-							</div>
-						</div>
-						<div class="m-3">
-							<button class="btn">SCHEDULE A DEMO</button>
-						</div>
-					</div>
-				</div>
-				<div class="mode">
-					<button class="btn_mode" id="switchButton">
-						<i class="far fa-moon"></i>
-						<i class="far fa-sun"></i>
-					</button>
-				</div>
-			</nav>
-		</div>
-	</header>
-
-	<!-- content -->
-	<section class="content">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6">
-					<h3>We Execute Our Ideas From Start to Finish</h3>
-					<p class="mt-3 mb-lg-5 mb-4">
-						Building a beautiful interactive business for
-						startups and innovative companies.
-					</p>
-					<a href="#!">
-						<button class="btn">GET STARTED</button>
-					</a>
-				</div>
-				<div class="col-lg-6">
-					<a href="#!">
-						<img src="./assets/img/main.png" alt="" />
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- business -->
-	<section class="business">
-		<div class="container">
-			<div class="header_business text-center mx-auto mt-4">
-				<h6 class="sub_title">Why choose us</h6>
-				<h3>Tools for business startup to professional</h3>
-				<p>
-					Vestibulum ante ipsum primis in faucibus orci luctus et
-					ultrices posuere cubilia Curae; Nulla mollis dapibus
-					nunc, ut rhoncus turpis sodales quis. Integer sit amet
-					mattis quam.
-				</p>
-			</div>
-			<div class="row text-center justify-content-center">
-				<div class="col-lg-4 col-md-6 mt-5">
-					<div class="business_item">
-						<a href="#">
-							<img src="./assets/img/s1.png" alt="" />
-							<h3 class="my-3">Interactive</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Laudantium tempora rerum
-								perspiciatis?
-							</p>
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 mt-5">
-					<div class="business_item">
-						<a href="#">
-							<img src="./assets/img/s2.png" alt="" />
-							<h3 class="my-3">Business</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Laudantium tempora rerum
-								perspiciatis?
-							</p>
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-4 mt-5">
-					<div class="business_item">
-						<a href="#">
-							<img src="./assets/img/s3.png" alt="" />
-							<h3 class="my-3">Inspiration</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Laudantium tempora rerum
-								perspiciatis?
-							</p>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- About -->
-	<section class="about mt-5 py-5">
-		<div class="container py-lg-3 mt-3">
-			<div class="row align-items-center">
-				<div class="col-sm-6 pr-md-5 about_info">
-					<h6 class="sub_title">About our company</h6>
-					<h3 class="mb-md-4 mb-3">
-						The Best Choice For Your Successful Business!
-					</h3>
-					<p class="mb-md-5 mb-4">
-						Lorem ipsum dolor, sit amet consectetur adipisicing
-						elit. Et est repellendus illum harum quam nihil
-						totam reprehenderit! Ut sed eveniet quos! Asperiores
-						officia, repudiandae similique reiciendis, ab est
-						magnam esse nesciunt ea fuga facere voluptatem.
-					</p>
-					<a href="#"><button class="btn">READ MORE</button></a>
-				</div>
-				<div class="col-sm-6 pl-md-5 mt-sm-0 mt-5">
-					<img src="./assets/img/about.jpg" alt="" class="img_top" />
-				</div>
-			</div>
-			<div class="row d-flex justify-content-center flex-wrap mt-5">
-				<div class="col-lg-4 col-sm-6">
-					<div class="about_item">
-						<h3>Happy Customers</h3>
-						<p class="counter">10459</p>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur
-							adipisicing elit. Facere atque sed.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mt-sm-0 mt-4">
-					<div class="about_item">
-						<h3>Winning Awards</h3>
-						<p class="counter">890</p>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur
-							adipisicing elit. Facere atque sed.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mt-lg-0 mt-sm-5 mt-4">
-					<div class="about_item">
-						<h3>Completed Projects</h3>
-						<p class="counter">5345</p>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur
-							adipisicing elit. Facere atque sed.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- resolution -->
-	<section class="resolution">
-		<div class="container">
-			<div class="d-grid row mt-5">
-				<div class="col-5 text-white">
-					<h2 class="mb-4">We are true to ourselves, and commit to always perform at our best.</h2>
-					<p class="mt-md-4 mt-3 mb-md-5 mb-4 text-white">Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Necessitatibus,
-						doloribus
-						atque.
-						Corrupti
-						exercitationem voluptatem ipsum iste consequuntur et vitae voluptas temporibus? Maxime dolores
-						amet
-						voluptatum illo consequatur placeat fugit ducimus.
-					</p>
-					<a class="btn btn-light">READ MORE</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- questions -->
-	<section class="question py-5">
-		<div class="container">
-			<div class="question_header text-center mx-auto">
-				<h6 class="sub_title">Questions and Answers</h6>
-				<h3>General FAQs</h3>
-				<p class="my-3">
-					Vestibulum ante ipsum primis in faucibus orci luctus et
-					ultrices posuere cubilia Curae; Nulla mollis dapibus
-					nunc, ut rhoncus turpis sodales quis. Integer sit amet
-					mattis quam.
-				</p>
-			</div>
-			<div class="row">
-				<div class="col-md-5 mt-5">
-					<div class="img_question">
-						<img src="./assets/img/women.jpg" alt="" class="img_top" />
-					</div>
-				</div>
-				<div class="col-md-7 mt-5">
-					<div class="faq_question">
-						<ul>
-							<li>
-								<input type="checkbox" checked />
-								<i></i>
-								<h2>
-									There are many passages but the
-									majority?
-								</h2>
-								<p>
-									Voluptates amet earum velit nobis
-									aliquam laboriosam nihil debitis facere
-									voluptatibus consectetur quae quasi
-									fuga, ad corrupti libero omnis sapiente
-									non assumenda, incidunt officiis eaque
-									iste minima autem.
-								</p>
-							</li>
-							<li>
-								<input type="checkbox" checked />
-								<i></i>
-								<h2>Sed ut perspiciatis unde omnis?</h2>
-								<p>
-									Voluptates amet earum velit nobis
-									aliquam laboriosam nihil debitis facere
-									voluptatibus consectetur quae quasi
-									fuga, ad corrupti libero omnis sapiente
-									non assumenda, incidunt officiis eaque
-									iste minima autem.
-								</p>
-							</li>
-							<li>
-								<input type="checkbox" checked />
-								<i></i>
-								<h2>At vero eos iusto odio ducimus qui?</h2>
-								<p>
-									Voluptates amet earum velit nobis
-									aliquam laboriosam nihil debitis facere
-									voluptatibus consectetur quae quasi
-									fuga, ad corrupti libero omnis sapiente
-									non assumenda, incidunt officiis eaque
-									iste minima autem.
-								</p>
-							</li>
-							<li>
-								<input type="checkbox" checked />
-								<i></i>
-								<h2>We denounce with righteous?</h2>
-								<p>
-									Voluptates amet earum velit nobis
-									aliquam laboriosam nihil debitis facere
-									voluptatibus consectetur quae quasi
-									fuga, ad corrupti libero omnis sapiente
-									non assumenda, incidunt officiis eaque
-									iste minima autem.
-								</p>
-							</li>
-							<li>
-								<input type="checkbox" checked />
-								<i></i>
-								<h2>Perspiciatis unde omnis?</h2>
-								<p>
-									Voluptates amet earum velit nobis
-									aliquam laboriosam nihil debitis facere
-									voluptatibus consectetur quae quasi
-									fuga, ad corrupti libero omnis sapiente
-									non assumenda, incidunt officiis eaque
-									iste minima autem.
-								</p>
-							</li>
-							<li>
-								<input type="checkbox" checked />
-								<i></i>
-								<h2>At vero eos iusto odio ducimus qui?</h2>
-								<p>
-									Voluptates amet earum velit nobis
-									aliquam laboriosam nihil debitis facere
-									voluptatibus consectetur quae quasi
-									fuga, ad corrupti libero omnis sapiente
-									non assumenda, incidunt officiis eaque
-									iste minima autem.
-								</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- featured -->
-	<section class="featured">
-		<div class="container">
-			<div class="header_featured text-center mx-auto">
-				<h6 class="sub_title">FEATURED CASES</h6>
-				<h3>Completed Projects</h3>
-				<p class="my-3">
-					Vestibulum ante ipsum primis in faucibus orci luctus et
-					ultrices posuere cubilia Curae; Nulla mollis dapibus
-					nunc, ut rhoncus turpis sodales quis. Integer sit amet
-					mattis quam.
-				</p>
-			</div>
-			<div class="content_featured">
-				<div class="col-lg-10 mx-auto">
-					<div class="row">
-						<div id="horizontalTab">
-							<ul class="resp-tabs-list">
-								<li class="resp-tab-item resp-tab-active">
-									Project One
+	<body id="myBody">
+		<header id="site-header" class="main_header">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container-fluid">
+						<h1 class="navbar-brand" href="#!">
+							<i class="fa-solid fa-handshake"></i>
+							Masterwork
+						</h1>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div
+							class="collapse navbar-collapse justify-content-end"
+							id="navbarSupportedContent"
+						>
+							<ul class="navbar-nav mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a
+										class="nav-link active"
+										aria-current="page"
+										href="#"
+										>Home</a
+									>
 								</li>
-								<li class="resp-tab-item">Project Two</li>
-								<li class="resp-tab-item">Project Three</li>
-								<div class="clear"></div>
+								<li class="nav-item">
+									<a class="nav-link" href="#">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Services</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a
+										class="nav-link dropdown-toggle"
+										href="#"
+										id="navbarDropdown"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										Pages
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#"
+												>Blog Posts</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#"
+												>Landing page</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#"
+												>404 page</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#footer"
+										>Contact</a
+									>
+								</li>
 							</ul>
-							<div class="resp-tabs-container">
-								<h2 class="resp-accordion resp-tab-active">
-									<span class="resp-arrow"></span>
-									Project One
-								</h2>
-								<div class="resp-tab-content resp-tab-content-active">
-									<div class="row">
-										<div class="col-md-6">
-											<h3>
-												Why a visual identity system
-												is more memorable
-											</h3>
-											<p>
-												Lorem ipsum dolor sit,
-												adipisicing elit repudiandae
-												perferendis dolores
-												praesentium nulla quibusdam
-												repellendus. consequatur
-												minus aliquam corrupti
-												blanditiis, necessitatibus
-												consectetur modi ipsum natus
-												accusantium sit pariatur.
-											</p>
-											<a href="#" class="btn mt-3">
-												KNOW MORE</a>
-										</div>
-										<div class="col-md-6 mt-md-0 mt-5">
-											<img src="./assets/img/b4.jpg" alt="" class="img_top" />
-										</div>
-									</div>
-								</div>
-								<h2 class="resp-accordion">
-									<span class="resp-arrow"></span>
-									Project Two
-								</h2>
-								<div class="resp-tab-content">
-									<div class="row">
-										<div class="col-md-6 mt-md-0 mt-5">
-											<img src="./assets/img/b5.jpg" alt="" class="img_top" />
-										</div>
-										<div class="col-md-6 px-5">
-											<h3>
-												Make website that looks
-												Lorem, ipsum dolor.
-											</h3>
-											<p>
-												Lorem ipsum dolor sit,
-												adipisicing elit repudiandae
-												perferendis dolores
-												praesentium nulla quibusdam
-												repellendus. consequatur
-												minus aliquam corrupti
-												blanditiis, necessitatibus
-												consectetur modi ipsum natus
-												accusantium sit pariatur.
-											</p>
-											<a href="#" class="btn mt-3">
-												KNOW MORE</a>
-										</div>
-									</div>
-								</div>
-								<h2 class="resp-accordion">
-									<span class="resp-arrow"></span>
-									Project Three
-								</h2>
-								<div class="resp-tab-content">
-									<div class="row">
-										<div class="col-md-6">
-											<h3>
-												Why a visual identity system
-												is more memorable
-											</h3>
-											<p>
-												Lorem ipsum dolor sit,
-												adipisicing elit repudiandae
-												perferendis dolores
-												praesentium nulla quibusdam
-												repellendus. consequatur
-												minus aliquam corrupti
-												blanditiis, necessitatibus
-												consectetur modi ipsum natus
-												accusantium sit pariatur.
-											</p>
-											<a href="#" class="btn mt-3">
-												KNOW MORE</a>
-										</div>
-										<div class="col-md-6 mt-md-0 mt-5">
-											<img src="./assets/img/b6.jpg" alt="" />
-										</div>
+							<div class="search">
+								<a href="#form_search">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</a>
+								<div id="form_search" class="search_ovelay">
+									<div class="popup">
+										<form
+											action="https://wp.w3layouts.com/masterwork/"
+											method="GET"
+											class="search-box d-sm-flex"
+										>
+											<input
+												type="search"
+												placeholder="Enter Keyword"
+												name="s"
+												required="required"
+												autofocus=""
+											/>
+											<button type="submit" class="btn">
+												Search
+											</button>
+										</form>
+										<a class="close" href="#close">x</a>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<!-- testimonials -->
-	<section class="testimonials py-4">
-		<div class="container pb-5">
-			<div class="header_featured text-center mx-auto">
-				<h6 class="sub_title">Our Clients Testimonials</h6>
-				<h3>What People Say</h3>
-				<p class="my-3">
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis
-					dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.
-				</p>
+							<div class="m-3 header_button">
+								<button class="btn">SCHEDULE A DEMO</button>
+							</div>
+						</div>
+						<div class="mode">
+							<button class="btn_mode" id="switchButton">
+								<i class="far fa-moon"></i>
+								<i class="far fa-sun"></i>
+							</button>
+						</div>
+					</div>
+				</nav>
 			</div>
-			<div class="owl-carousel owl-theme owl-two">
-				<div class="item">
-					<div class="slider-info mt-lg-4 mt-3">
-						<div class="img-circle">
-							<img src="./assets/img/team3.jpg" alt="client image" class="img-fluid testimonial-img">
-						</div>
-						<div class="message">
-							<i class="fa fa-quote-left" aria-hidden="true"></i>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corporis deleniti
-								praesentium doloremque. Repellendus soluta quos nemo quisquam consectetur temporibus
-								quam obcaecati sapiente quaerat et. </p>
-							<div class="name mt-4">
-								<h4>
-									Isabella Mia </h4>
-								<p>
-									Company name </p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="slider-info mt-lg-4 mt-3">
-						<div class="img-circle">
-							<img src="./assets/img/team4.jpg" alt="client image" class="img-fluid testimonial-img">
-						</div>
-						<div class="message">
-							<i class="fa fa-quote-left" aria-hidden="true"></i>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corporis deleniti
-								praesentium doloremque. Repellendus soluta quos nemo quisquam consectetur temporibus
-								quam obcaecati sapiente quaerat et. </p>
-							<div class="name mt-4">
-								<h4>
-									Benjamin Lucas </h4>
-								<p>
-									Company name </p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="slider-info mt-lg-4 mt-3">
-						<div class="img-circle">
-							<img src="./assets/img/team5.jpg" alt="client image" class="img-fluid testimonial-img">
-						</div>
-						<div class="message">
-							<i class="fa fa-quote-left" aria-hidden="true"></i>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corporis deleniti
-								praesentium doloremque. Repellendus soluta quos nemo quisquam consectetur temporibus
-								quam obcaecati sapiente quaerat et. </p>
-							<div class="name mt-4">
-								<h4>
-									Oliver Bradley </h4>
-								<p>
-									Company name </p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="slider-info mt-lg-4 mt-3">
-						<div class="img-circle">
-							<img src="./assets/img/team6.jpg" alt="client image" class="img-fluid testimonial-img">
-						</div>
-						<div class="message">
-							<i class="fa fa-quote-left" aria-hidden="true"></i>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corporis deleniti
-								praesentium doloremque. Repellendus soluta quos nemo quisquam consectetur temporibus
-								quam obcaecati sapiente quaerat et. </p>
-							<div class="name mt-4">
-								<h4>
-									William James</h4>
-								<p>
-									Company name </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+		</header>
 
-	<!-- build -->
-	<section class="build pt-3 pb-5">
-		<div class="container py-3 text-center">
-			<div class="header_featured text-center mx-auto">
-				<h3>Ready to build your own brand community?</h3>
-				<p class="my-3">
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis
-					dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.
-				</p>
+		<!-- content -->
+		<section class="content">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<h3 class="content_title">
+							We Execute Our Ideas From Start to Finish
+						</h3>
+						<p class="content_des mt-3 mb-lg-5 mb-4">
+							Building a beautiful interactive business for
+							startups and innovative companies.
+						</p>
+						<a href="#!">
+							<button class="btn">GET STARTED</button>
+						</a>
+					</div>
+					<div class="col-lg-6">
+						<a href="#!">
+							<img src="./assets/img/main.png" alt="" />
+						</a>
+					</div>
+				</div>
 			</div>
-			<div class="buttons mt-5">
-				<a href="#url" class="btn theme-button">
-					BOOK A DEMO</a>
-				<a href="#url" class="btn button-special theme-button">
-					GET STARTED</a>
+		</section>
+
+		<!-- business -->
+		<section class="business">
+			<div class="container">
+				<div class="header_business text-center mx-auto mt-4">
+					<h6 class="sub_title">Why choose us</h6>
+					<h3>Tools for business startup to professional</h3>
+					<p>
+						Vestibulum ante ipsum primis in faucibus orci luctus et
+						ultrices posuere cubilia Curae; Nulla mollis dapibus
+						nunc, ut rhoncus turpis sodales quis. Integer sit amet
+						mattis quam.
+					</p>
+				</div>
+				<div class="row text-center justify-content-center">
+					<div class="col-lg-4 col-md-6 mt-5">
+						<div class="business_item">
+							<a href="#">
+								<img src="./assets/img/s1.png" alt="" />
+								<h3 class="my-3">Interactive</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Laudantium tempora rerum
+									perspiciatis?
+								</p>
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mt-5">
+						<div class="business_item">
+							<a href="#">
+								<img src="./assets/img/s2.png" alt="" />
+								<h3 class="my-3">Business</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Laudantium tempora rerum
+									perspiciatis?
+								</p>
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-4 mt-5">
+						<div class="business_item">
+							<a href="#">
+								<img src="./assets/img/s3.png" alt="" />
+								<h3 class="my-3">Inspiration</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Laudantium tempora rerum
+									perspiciatis?
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</section>
-	<!-- footer -->
-	<footer class="pt-5" id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-2 col-md-4 mb-3">
-					<h5>Meta</h5>
-					<ul class="nav flex-column">
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">Log In</a></li>
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">Entries Feed</a>
+		</section>
+
+		<!-- About -->
+		<section class="about mt-5 py-5">
+			<div class="container py-lg-3 mt-3">
+				<div class="row align-items-center">
+					<div class="col-sm-6 pr-md-5 about_info">
+						<h6 class="sub_title">About our company</h6>
+						<h3 class="mb-md-4 mb-3">
+							The Best Choice For Your Successful Business!
+						</h3>
+						<p class="mb-md-5 mb-4">
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Et est repellendus illum harum quam nihil
+							totam reprehenderit! Ut sed eveniet quos! Asperiores
+							officia, repudiandae similique reiciendis, ab est
+							magnam esse nesciunt ea fuga facere voluptatem.
+						</p>
+						<a href="#"><button class="btn">READ MORE</button></a>
+					</div>
+					<div class="col-sm-6 pl-md-5 mt-sm-0 mt-5">
+						<img
+							src="./assets/img/about.jpg"
+							alt=""
+							class="img_top"
+						/>
+					</div>
+				</div>
+				<div class="row d-flex justify-content-center flex-wrap mt-5">
+					<div class="col-lg-4 col-sm-6">
+						<div class="about_item">
+							<h3>Happy Customers</h3>
+							<p class="counter">10459</p>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Facere atque sed.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 mt-sm-0 mt-4">
+						<div class="about_item">
+							<h3>Winning Awards</h3>
+							<p class="counter">890</p>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Facere atque sed.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 mt-lg-0 mt-sm-5 mt-4">
+						<div class="about_item">
+							<h3>Completed Projects</h3>
+							<p class="counter">5345</p>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Facere atque sed.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- resolution -->
+		<section class="resolution">
+			<div class="container">
+				<div class="d-grid row mt-5">
+					<div class="col-5 text-white">
+						<h2 class="mb-4">
+							We are true to ourselves, and commit to always
+							perform at our best.
+						</h2>
+						<p class="mt-md-4 mt-3 mb-md-5 mb-4 text-white">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Necessitatibus, doloribus atque. Corrupti
+							exercitationem voluptatem ipsum iste consequuntur et
+							vitae voluptas temporibus? Maxime dolores amet
+							voluptatum illo consequatur placeat fugit ducimus.
+						</p>
+						<a class="btn btn-light">READ MORE</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- questions -->
+		<section class="question py-5">
+			<div class="container">
+				<div class="question_header text-center mx-auto">
+					<h6 class="sub_title">Questions and Answers</h6>
+					<h3>General FAQs</h3>
+					<p class="my-3">
+						Vestibulum ante ipsum primis in faucibus orci luctus et
+						ultrices posuere cubilia Curae; Nulla mollis dapibus
+						nunc, ut rhoncus turpis sodales quis. Integer sit amet
+						mattis quam.
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-md-5 mt-5">
+						<div class="img_question">
+							<img
+								src="./assets/img/women.jpg"
+								alt=""
+								class="img_top"
+							/>
+						</div>
+					</div>
+					<div class="col-md-7 mt-5">
+						<div class="faq_question">
+							<ul>
+								<li>
+									<input type="checkbox" checked />
+									<i></i>
+									<h2>
+										There are many passages but the
+										majority?
+									</h2>
+									<p>
+										Voluptates amet earum velit nobis
+										aliquam laboriosam nihil debitis facere
+										voluptatibus consectetur quae quasi
+										fuga, ad corrupti libero omnis sapiente
+										non assumenda, incidunt officiis eaque
+										iste minima autem.
+									</p>
+								</li>
+								<li>
+									<input type="checkbox" checked />
+									<i></i>
+									<h2>Sed ut perspiciatis unde omnis?</h2>
+									<p>
+										Voluptates amet earum velit nobis
+										aliquam laboriosam nihil debitis facere
+										voluptatibus consectetur quae quasi
+										fuga, ad corrupti libero omnis sapiente
+										non assumenda, incidunt officiis eaque
+										iste minima autem.
+									</p>
+								</li>
+								<li>
+									<input type="checkbox" checked />
+									<i></i>
+									<h2>At vero eos iusto odio ducimus qui?</h2>
+									<p>
+										Voluptates amet earum velit nobis
+										aliquam laboriosam nihil debitis facere
+										voluptatibus consectetur quae quasi
+										fuga, ad corrupti libero omnis sapiente
+										non assumenda, incidunt officiis eaque
+										iste minima autem.
+									</p>
+								</li>
+								<li>
+									<input type="checkbox" checked />
+									<i></i>
+									<h2>We denounce with righteous?</h2>
+									<p>
+										Voluptates amet earum velit nobis
+										aliquam laboriosam nihil debitis facere
+										voluptatibus consectetur quae quasi
+										fuga, ad corrupti libero omnis sapiente
+										non assumenda, incidunt officiis eaque
+										iste minima autem.
+									</p>
+								</li>
+								<li>
+									<input type="checkbox" checked />
+									<i></i>
+									<h2>Perspiciatis unde omnis?</h2>
+									<p>
+										Voluptates amet earum velit nobis
+										aliquam laboriosam nihil debitis facere
+										voluptatibus consectetur quae quasi
+										fuga, ad corrupti libero omnis sapiente
+										non assumenda, incidunt officiis eaque
+										iste minima autem.
+									</p>
+								</li>
+								<li>
+									<input type="checkbox" checked />
+									<i></i>
+									<h2>At vero eos iusto odio ducimus qui?</h2>
+									<p>
+										Voluptates amet earum velit nobis
+										aliquam laboriosam nihil debitis facere
+										voluptatibus consectetur quae quasi
+										fuga, ad corrupti libero omnis sapiente
+										non assumenda, incidunt officiis eaque
+										iste minima autem.
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- featured -->
+		<section class="featured">
+			<div class="container">
+				<div class="header_featured text-center mx-auto">
+					<h6 class="sub_title">FEATURED CASES</h6>
+					<h3>Completed Projects</h3>
+					<p class="my-3">
+						Vestibulum ante ipsum primis in faucibus orci luctus et
+						ultrices posuere cubilia Curae; Nulla mollis dapibus
+						nunc, ut rhoncus turpis sodales quis. Integer sit amet
+						mattis quam.
+					</p>
+				</div>
+				<div class="content_featured">
+					<div class="col-lg-10 mx-auto">
+						<div class="row">
+							<div id="horizontalTab">
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item resp-tab-active">
+										Project One
+									</li>
+									<li class="resp-tab-item">Project Two</li>
+									<li class="resp-tab-item">Project Three</li>
+									<div class="clear"></div>
+								</ul>
+								<div class="resp-tabs-container">
+									<h2 class="resp-accordion resp-tab-active">
+										<span class="resp-arrow"></span>
+										Project One
+									</h2>
+									<div
+										class="resp-tab-content resp-tab-content-active"
+									>
+										<div class="row">
+											<div class="col-md-6">
+												<h3>
+													Why a visual identity system
+													is more memorable
+												</h3>
+												<p>
+													Lorem ipsum dolor sit,
+													adipisicing elit repudiandae
+													perferendis dolores
+													praesentium nulla quibusdam
+													repellendus. consequatur
+													minus aliquam corrupti
+													blanditiis, necessitatibus
+													consectetur modi ipsum natus
+													accusantium sit pariatur.
+												</p>
+												<a href="#" class="btn mt-3">
+													KNOW MORE</a
+												>
+											</div>
+											<div class="col-md-6 mt-md-0 mt-5">
+												<img
+													src="./assets/img/b4.jpg"
+													alt=""
+													class="img_top"
+												/>
+											</div>
+										</div>
+									</div>
+									<h2 class="resp-accordion">
+										<span class="resp-arrow"></span>
+										Project Two
+									</h2>
+									<div class="resp-tab-content">
+										<div class="row">
+											<div class="col-md-6 mt-md-0 mt-5">
+												<img
+													src="./assets/img/b5.jpg"
+													alt=""
+													class="img_top"
+												/>
+											</div>
+											<div class="col-md-6 px-5">
+												<h3>
+													Make website that looks
+													Lorem, ipsum dolor.
+												</h3>
+												<p>
+													Lorem ipsum dolor sit,
+													adipisicing elit repudiandae
+													perferendis dolores
+													praesentium nulla quibusdam
+													repellendus. consequatur
+													minus aliquam corrupti
+													blanditiis, necessitatibus
+													consectetur modi ipsum natus
+													accusantium sit pariatur.
+												</p>
+												<a href="#" class="btn mt-3">
+													KNOW MORE</a
+												>
+											</div>
+										</div>
+									</div>
+									<h2 class="resp-accordion">
+										<span class="resp-arrow"></span>
+										Project Three
+									</h2>
+									<div class="resp-tab-content">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>
+													Why a visual identity system
+													is more memorable
+												</h3>
+												<p>
+													Lorem ipsum dolor sit,
+													adipisicing elit repudiandae
+													perferendis dolores
+													praesentium nulla quibusdam
+													repellendus. consequatur
+													minus aliquam corrupti
+													blanditiis, necessitatibus
+													consectetur modi ipsum natus
+													accusantium sit pariatur.
+												</p>
+												<a href="#" class="btn mt-3">
+													KNOW MORE</a
+												>
+											</div>
+											<div class="col-md-6 mt-md-0 mt-5">
+												<img
+													src="./assets/img/b6.jpg"
+													alt=""
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- testimonials -->
+		<section class="testimonials py-4">
+			<div class="container pb-5">
+				<div class="header_featured text-center mx-auto">
+					<h6 class="sub_title">Our Clients Testimonials</h6>
+					<h3>What People Say</h3>
+					<p class="my-3">
+						Vestibulum ante ipsum primis in faucibus orci luctus et
+						ultrices posuere cubilia Curae; Nulla mollis dapibus
+						nunc, ut rhoncus turpis sodales quis. Integer sit amet
+						mattis quam.
+					</p>
+				</div>
+				<div class="owl-carousel owl-theme owl-two">
+					<div class="item">
+						<div class="slider-info mt-lg-4 mt-3">
+							<div class="img-circle">
+								<img
+									src="./assets/img/team3.jpg"
+									alt="client image"
+									class="img-fluid testimonial-img"
+								/>
+							</div>
+							<div class="message">
+								<i
+									class="fa fa-quote-left"
+									aria-hidden="true"
+								></i>
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Assumenda corporis
+									deleniti praesentium doloremque. Repellendus
+									soluta quos nemo quisquam consectetur
+									temporibus quam obcaecati sapiente quaerat
+									et.
+								</p>
+								<div class="name mt-4">
+									<h4>Isabella Mia</h4>
+									<p>Company name</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slider-info mt-lg-4 mt-3">
+							<div class="img-circle">
+								<img
+									src="./assets/img/team4.jpg"
+									alt="client image"
+									class="img-fluid testimonial-img"
+								/>
+							</div>
+							<div class="message">
+								<i
+									class="fa fa-quote-left"
+									aria-hidden="true"
+								></i>
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Assumenda corporis
+									deleniti praesentium doloremque. Repellendus
+									soluta quos nemo quisquam consectetur
+									temporibus quam obcaecati sapiente quaerat
+									et.
+								</p>
+								<div class="name mt-4">
+									<h4>Benjamin Lucas</h4>
+									<p>Company name</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slider-info mt-lg-4 mt-3">
+							<div class="img-circle">
+								<img
+									src="./assets/img/team5.jpg"
+									alt="client image"
+									class="img-fluid testimonial-img"
+								/>
+							</div>
+							<div class="message">
+								<i
+									class="fa fa-quote-left"
+									aria-hidden="true"
+								></i>
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Assumenda corporis
+									deleniti praesentium doloremque. Repellendus
+									soluta quos nemo quisquam consectetur
+									temporibus quam obcaecati sapiente quaerat
+									et.
+								</p>
+								<div class="name mt-4">
+									<h4>Oliver Bradley</h4>
+									<p>Company name</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="slider-info mt-lg-4 mt-3">
+							<div class="img-circle">
+								<img
+									src="./assets/img/team6.jpg"
+									alt="client image"
+									class="img-fluid testimonial-img"
+								/>
+							</div>
+							<div class="message">
+								<i
+									class="fa fa-quote-left"
+									aria-hidden="true"
+								></i>
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Assumenda corporis
+									deleniti praesentium doloremque. Repellendus
+									soluta quos nemo quisquam consectetur
+									temporibus quam obcaecati sapiente quaerat
+									et.
+								</p>
+								<div class="name mt-4">
+									<h4>William James</h4>
+									<p>Company name</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- build -->
+		<section class="build pt-3 pb-5">
+			<div class="container py-3 text-center">
+				<div class="header_featured text-center mx-auto">
+					<h3>Ready to build your own brand community?</h3>
+					<p class="my-3">
+						Vestibulum ante ipsum primis in faucibus orci luctus et
+						ultrices posuere cubilia Curae; Nulla mollis dapibus
+						nunc, ut rhoncus turpis sodales quis. Integer sit amet
+						mattis quam.
+					</p>
+				</div>
+				<div class="buttons mt-5">
+					<a href="#url" class="btn theme-button"> BOOK A DEMO</a>
+					<a href="#url" class="btn button-special theme-button">
+						GET STARTED</a
+					>
+				</div>
+			</div>
+		</section>
+		<!-- footer -->
+		<footer class="pt-5" id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-md-4 mb-3">
+						<h5>Meta</h5>
+						<ul class="nav flex-column">
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>Log In</a
+								>
+							</li>
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>Entries Feed</a
+								>
+							</li>
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>Comments Feed</a
+								>
+							</li>
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>WordPress.Org</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-4 mb-3">
+						<h5>Categories</h5>
+						<ul class="nav flex-column">
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>Business</a
+								>
+							</li>
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>Design</a
+								>
+							</li>
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>Industry</a
+								>
+							</li>
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>Programming</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2 col-md-4 mb-3">
+						<h5>Archives</h5>
+						<ul class="nav flex-column">
+							<li class="nav-item mb-2">
+								<a
+									href="#"
+									class="nav-link forhover p-0 text-muted"
+									>March 2021</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-5 col-md-12 mb-3">
+						<h5>Newsletter</h5>
+						<form class="footer__tag">
+							<p class="contact__form">
+								Get latest updates and offers.
+							</p>
+							<div
+								class="d-flex flex-column flex-sm-row w-100 gap-2"
+							>
+								<!-- <label for="newsletter1" class="visually-hidden">Email address</label> -->
+								<input
+									id="email"
+									type="email"
+									class="form-control"
+									placeholder="Email address"
+								/>
+								<button class="btn btn-primary" type="button">
+									Go
+								</button>
+							</div>
+							<p class="mt-3">
+								Sign up for our latest news & articles. We won’t
+								give you spam mails.
+							</p>
+						</form>
+					</div>
+				</div>
+				<div
+					class="d-lg-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+				>
+					<p class="justify-content-md-center text-md-center pb-md-3">
+						© 2024 Masterwork. All Rights Reserved | WordPress Theme
+						by <span class="forhover">W3Layouts.</span>
+					</p>
+					<ul
+						class="list-unstyled d-flex footer__txt justify-content-md-center"
+					>
+						<li class="ms-3">
+							<a class="link-dark forhover" href="#">
+								<i class="fab fa-facebook-f"></i>
+							</a>
 						</li>
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">Comments Feed</a>
+						<li class="ms-3">
+							<a class="link-dark forhover" href="#">
+								<i class="fab fa-linkedin-in"></i>
+							</a>
 						</li>
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">WordPress.Org</a>
+						<li class="ms-3">
+							<a class="link-dark forhover" href="#">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</li>
+						<li class="ms-3">
+							<a class="link-dark forhover" href="#"
+								><i class="fab fa-google-plus-g"></i>
+							</a>
+						</li>
+						<li class="ms-3">
+							<a class="link-dark forhover" href="#">
+								<i class="fab fa-github"></i>
+							</a>
 						</li>
 					</ul>
 				</div>
-				<div class="col-lg-2 col-md-4 mb-3">
-					<h5>Categories</h5>
-					<ul class="nav flex-column">
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">Business</a></li>
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">Design</a></li>
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">Industry</a></li>
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">Programming</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-2 col-md-4 mb-3">
-					<h5>Archives</h5>
-					<ul class="nav flex-column">
-						<li class="nav-item mb-2"><a href="#" class="nav-link forhover p-0 text-muted">March 2021</a>
-						</li>
-
-					</ul>
-				</div>
-				<div class="col-lg-5 col-md-12 mb-3">
-					<h5>Newsletter</h5>
-					<form class="footer__tag">
-						<p class="contact__form">Get latest updates and offers.</p>
-						<div class="d-flex flex-column flex-sm-row w-100 gap-2">
-							<!-- <label for="newsletter1" class="visually-hidden">Email address</label> -->
-							<input id="email" type="email" class="form-control" placeholder="Email address">
-							<button class="btn btn-primary" type="button">Go</button>
-						</div>
-						<p class="mt-3">Sign up for our latest news & articles. We won’t give you spam mails.</p>
-					</form>
-				</div>
 			</div>
-			<div class="d-lg-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-				<p class="justify-content-md-center text-md-center pb-md-3">© 2024 Masterwork. All Rights Reserved |
-					WordPress
-					Theme by <span class="forhover">W3Layouts.</span>
-				</p>
-				<ul class="list-unstyled d-flex footer__txt justify-content-md-center">
-					<li class="ms-3"><a class="link-dark forhover" href="#">
-							<i class="fab fa-facebook-f"></i>
-						</a></li>
-					<li class="ms-3"><a class="link-dark forhover" href="#">
-							<i class="fab fa-linkedin-in"></i>
-						</a></li>
-					<li class="ms-3"><a class="link-dark forhover" href="#">
-							<i class="fab fa-twitter"></i>
-						</a></li>
-					<li class="ms-3"><a class="link-dark forhover" href="#"><i class="fab fa-google-plus-g"></i>
-						</a></li>
-					<li class="ms-3"><a class="link-dark forhover" href="#">
-							<i class="fab fa-github"></i>
-						</a></li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-	<!-- Back to top -->
-	<a href="#" class="BackToTop cd-top text-replace js-cd-top">
-		<i class="fa fa-angle-up"></i>
-	</a>
-	<!-- jquery -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- waypoint -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
-		integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- count up -->
-	<script src="../Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/jquery.countup.js"></script>
+		</footer>
+		<!-- Back to top -->
+		<a href="#" class="BackToTop cd-top text-replace js-cd-top">
+			<i class="fa fa-angle-up"></i>
+		</a>
+		<!-- jquery -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- waypoint -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+			integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- count up -->
+		<script src="../Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/jquery.countup.js"></script>
 
-	<!-- config count up -->
-	<script>
-		$(".counter").countUp();
-	</script>
+		<!-- config count up -->
+		<script>
+			$(".counter").countUp();
+		</script>
 
-	<!-- easy-responsive -->
-	<script src="./Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.js"></script>
+		<!-- easy-responsive -->
+		<script src="./Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.js"></script>
 
-	<script>
-		$("#horizontalTab").easyResponsiveTabs();
-	</script>
+		<script>
+			$("#horizontalTab").easyResponsiveTabs();
+		</script>
 
-	<!-- owl-carousel -->
-	<script src="./owl-carousel/owl.carousel.min.js"></script>
-	<!-- <script>
+		<!-- owl-carousel -->
+		<script src="./owl-carousel/owl.carousel.min.js"></script>
+		<!-- <script>
 		$(document).ready(function () {
 			$(".owl-carousel").owlCarousel();
 		});
 	</script> -->
-	<script>
-		$('.owl-carousel').owlCarousel({
-			loop: true,
-			margin: 10,
-			// nav: true,
-			responsive: {
-				0: {
-					items: 1
+		<script>
+			$(".owl-carousel").owlCarousel({
+				loop: true,
+				margin: 10,
+				// nav: true,
+				responsive: {
+					0: {
+						items: 1,
+					},
+					600: {
+						items: 1,
+					},
+					1000: {
+						items: 2,
+					},
 				},
-				600: {
-					items: 1
-				},
-				1000: {
-					items: 2
-				}
-			}
-		})
-	</script>
-	<!-- Back to top -->
-	<script src="./BTT/util.js"></script>
-	<script src="./BTT/main_btt.js"></script>
+			});
+		</script>
+		<!-- Back to top -->
+		<script src="./BTT/util.js"></script>
+		<script src="./BTT/main_btt.js"></script>
 
-	<!-- file js -->
-	<script src="./index.js"></script>
+		<!-- file js -->
+		<script src="./index.js"></script>
 
-	<!-- link bs5 -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
-</body>
-
+		<!-- link bs5 -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
