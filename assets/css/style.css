@@ -1164,8 +1164,8 @@ footer .container .forhover:hover {
 	.mode {
 		position: absolute;
 		position: absolute;
-		right: 90px;
-		top: 20px;
+		right: 88px;
+		top: 14px;
 	}
 
 	.navbar-nav {
@@ -1194,19 +1194,5 @@ footer .container .forhover:hover {
 
 	.testimonials .message {
 		margin-top: 14px;
-	}
-}
-
-/* nghĩa */
-@media (max-width: 1400px) {
-	footer .footer__tag button {
-		width: 30%;
-	}
-}
-
-@media (min-width: 767px) {
-	footer .footer__input {
-		min-width: 50%;
-		padding-left: 40px;
 	}
 }
