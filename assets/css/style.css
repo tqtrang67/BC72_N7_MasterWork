@@ -74,11 +74,15 @@ header.nav-fixed {
 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
 }
 
+.navbar {
+	padding: 0;
+}
 .navbar .navbar-brand {
 	font-size: 26px;
 	font-weight: 700;
 	text-transform: capitalize;
 	color: #dc4f72;
+	cursor: pointer;
 }
 
 .navbar-light .navbar-brand:hover {
