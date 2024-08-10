@@ -12,7 +12,7 @@ $(window).on("scroll", function () {
 	}
 });
 
-//Main navigation Active Class Add Remove
+// button navbar-toggle
 $(".navbar-toggler").on("click", function () {
 	$("header").toggleClass("active");
 });
