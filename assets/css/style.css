@@ -77,6 +77,7 @@ header.nav-fixed {
 .navbar {
 	padding: 0;
 }
+
 .navbar .navbar-brand {
 	font-size: 26px;
 	font-weight: 700;
@@ -190,6 +191,7 @@ a.dropdown-item:hover::before {
 .btn_mode {
 	font-size: 24px;
 }
+
 .search .search_ovelay {
 	position: fixed;
 	top: 0px;
@@ -405,11 +407,9 @@ a.dropdown-item:hover::before {
 
 /* resolution */
 .resolution {
-	background: linear-gradient(
-			to right,
+	background: linear-gradient(to right,
 			rgba(0, 0, 0, 0.7),
-			rgba(0, 0, 0, 0.33)
-		),
+			rgba(0, 0, 0, 0.33)),
 		url(../img/bg.jpg);
 	background-position-y: 50%;
 	background-attachment: fixed;
@@ -551,7 +551,7 @@ a.dropdown-item:hover::before {
 	transition: 0.3s;
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ p {
+.faq_question ul li input[type="checkbox"]:checked~p {
 	margin-top: 0;
 	max-height: 0;
 	opacity: 0;
@@ -559,11 +559,11 @@ a.dropdown-item:hover::before {
 	transform: translate(0, 50%);
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ i::before {
+.faq_question ul li input[type="checkbox"]:checked~i::before {
 	transform: translate(2px, 0) rotate(45deg);
 }
 
-.faq_question ul li input[type="checkbox"]:checked ~ i::after {
+.faq_question ul li input[type="checkbox"]:checked~i::after {
 	transform: translate(-2px, 0) rotate(-45deg);
 }
 
@@ -673,8 +673,6 @@ a.dropdown-item:hover::before {
 
 /* Dark Theme */
 .dark#myBody,
-.dark .about,
-.dark .question,
 .dark .featured {
 	background-color: #131617 !important;
 }
@@ -768,6 +766,9 @@ a.dropdown-item:hover::before {
 }
 
 /* dark about */
+.dark .about {
+	background-color: #191c1d !important;
+}
 
 .dark .about_item {
 	background-color: #131617;
@@ -778,6 +779,9 @@ a.dropdown-item:hover::before {
 }
 
 /* dark question */
+.dark .question {
+	background-color: #191c1d !important;
+}
 
 .dark .faq_question li {
 	background-color: #131617;
@@ -1147,10 +1151,12 @@ footer .container .forhover:hover {
 	.container {
 		max-width: 100%;
 	}
+
 	header.main-header {
 		height: auto;
 		padding: 15px 0;
 	}
+
 	.btn {
 		line-height: 44px;
 		padding: 0px 20px;
@@ -1194,5 +1200,18 @@ footer .container .forhover:hover {
 
 	.testimonials .message {
 		margin-top: 14px;
+	}
+}
+
+@media (max-width: 1400px) {
+	footer .footer__tag button {
+		width: 30%;
+	}
+}
+
+@media (min-width: 767px) {
+	footer .footer__input {
+		min-width: 50%;
+		padding-left: 40px;
 	}
 }
