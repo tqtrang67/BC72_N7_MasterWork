@@ -108,8 +108,7 @@ header.nav-fixed {
 	transition: 0.5s;
 }
 
-.nav-item .nav-link::before,
-.dropdown-item::before {
+.nav-item .nav-link::before {
 	position: absolute;
 	content: "";
 	background-color: #dc4f72;
@@ -126,6 +125,20 @@ header.nav-fixed {
 .navbar .nav-item:hover .nav-link::before {
 	width: 20px;
 	color: #dc4f72;
+}
+
+a.dropdown-item {
+	position: relative;
+}
+
+.dropdown-item::before {
+	position: absolute;
+	content: "";
+	background-color: #dc4f72;
+	width: 0px;
+	height: 2px;
+	bottom: 4px;
+	transition: 0.5s;
 }
 
 a.dropdown-item:hover {
@@ -233,6 +246,10 @@ a.dropdown-item:hover::before {
 	border-bottom-left-radius: 6px;
 	border-top-left-radius: 6px;
 	border-right: none;
+}
+
+.popup form input:focus {
+	outline: none;
 }
 
 .search .popup form .btn {
@@ -407,26 +424,37 @@ a.dropdown-item:hover::before {
 
 /* resolution */
 .resolution {
-	background: linear-gradient(to right,
+	background: linear-gradient(
+			to right,
 			rgba(0, 0, 0, 0.7),
-			rgba(0, 0, 0, 0.33)),
+			rgba(0, 0, 0, 0.33)
+		),
 		url(../img/bg.jpg);
-	background-position-y: 50%;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
 	background-size: cover;
-	align-items: center;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 	min-height: 480px;
-	/* width: 100%; */
+	display: grid;
+	align-items: center;
 	padding: 2rem 0;
 }
 
-.resolution h2.mb-4 {
+.header_resolution {
+	max-width: 550px;
+}
+
+.title_resolution h2 {
+	color: #ffffff;
+	font-size: 30px;
+	line-height: 36px;
 	font-weight: 700;
 }
 
-.resolution .col-5 {
-	width: 580px;
+.list_resolution p {
+	font-size: 16px;
+	color: #eee;
+	line-height: 24.5px;
 }
 
 .resolution .btn-light {
@@ -551,7 +579,7 @@ a.dropdown-item:hover::before {
 	transition: 0.3s;
 }
 
-.faq_question ul li input[type="checkbox"]:checked~p {
+.faq_question ul li input[type="checkbox"]:checked ~ p {
 	margin-top: 0;
 	max-height: 0;
 	opacity: 0;
@@ -559,11 +587,11 @@ a.dropdown-item:hover::before {
 	transform: translate(0, 50%);
 }
 
-.faq_question ul li input[type="checkbox"]:checked~i::before {
+.faq_question ul li input[type="checkbox"]:checked ~ i::before {
 	transform: translate(2px, 0) rotate(45deg);
 }
 
-.faq_question ul li input[type="checkbox"]:checked~i::after {
+.faq_question ul li input[type="checkbox"]:checked ~ i::after {
 	transform: translate(-2px, 0) rotate(-45deg);
 }
 
@@ -703,6 +731,14 @@ a.dropdown-item:hover::before {
 
 .dark .nav-fixed .nav-item .dropdown-toggle::after {
 	color: #eee;
+}
+
+.dark .nav-fixed .nav-item .dropdown-toggle:hover::after {
+	color: #dc4f72;
+}
+
+.dark .nav-item .nav-link:hover {
+	color: #dc4f72 !important;
 }
 
 .dark .nav-item a.nav-link.active {
@@ -1181,6 +1217,11 @@ footer .container .forhover:hover {
 		padding: 20px 0;
 	}
 
+	.navbar-nav .dropdown-menu {
+		transform: translateX(0px) !important;
+		text-align: center;
+	}
+
 	.search {
 		text-align: center;
 		margin-bottom: 10px;
@@ -1200,6 +1241,17 @@ footer .container .forhover:hover {
 
 	.testimonials .message {
 		margin-top: 14px;
+	}
+}
+
+@media (max-width: 767px) {
+	.list_resolution {
+		width: 100%;
+	}
+	.des_footer,
+	.footer__txt {
+		display: flex;
+		justify-content: center;
 	}
 }
 
