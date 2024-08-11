@@ -108,14 +108,23 @@ header.nav-fixed {
 	transition: 0.5s;
 }
 
-.nav-item .nav-link::before,
-.dropdown-item::before {
+.nav-item .nav-link::before {
 	position: absolute;
 	content: "";
 	background-color: #dc4f72;
 	width: 0px;
 	height: 2px;
 	bottom: 13px;
+	transition: 0.5s;
+}
+
+a.dropdown-item::before {
+	position: absolute;
+	content: "";
+	background-color: #dc4f72;
+	width: 0px;
+	height: 2px;
+	bottom: 4px;
 	transition: 0.5s;
 }
 
@@ -128,6 +137,10 @@ header.nav-fixed {
 	color: #dc4f72;
 }
 
+a.dropdown-item {
+	position: relative;
+}
+
 a.dropdown-item:hover {
 	color: #dc4f72;
 	background-color: #fff;
@@ -137,10 +150,14 @@ a.dropdown-item:hover::before {
 	width: 20px;
 }
 
-.nav-item .dropdown-menu .dropdown-item:hover .nav-link::before {
+.popup form input:focus {
+	outline: none;
+}
+
+/* .nav-item .dropdown-menu .dropdown-item:hover .nav-link::before {
 	width: 0;
 	color: #000;
-}
+} */
 
 .nav-item .active {
 	color: #dc4f72 !important;
@@ -400,9 +417,11 @@ a.dropdown-item:hover::before {
 
 /* resolution */
 .resolution {
-	background: linear-gradient(to right,
+	background: linear-gradient(
+			to right,
 			rgba(0, 0, 0, 0.7),
-			rgba(0, 0, 0, 0.33)),
+			rgba(0, 0, 0, 0.33)
+		),
 		url(../img/bg.jpg);
 	background-position-y: 50%;
 	background-attachment: fixed;
@@ -544,7 +563,7 @@ a.dropdown-item:hover::before {
 	transition: 0.3s;
 }
 
-.faq_question ul li input[type="checkbox"]:checked~p {
+.faq_question ul li input[type="checkbox"]:checked ~ p {
 	margin-top: 0;
 	max-height: 0;
 	opacity: 0;
@@ -552,11 +571,11 @@ a.dropdown-item:hover::before {
 	transform: translate(0, 50%);
 }
 
-.faq_question ul li input[type="checkbox"]:checked~i::before {
+.faq_question ul li input[type="checkbox"]:checked ~ i::before {
 	transform: translate(2px, 0) rotate(45deg);
 }
 
-.faq_question ul li input[type="checkbox"]:checked~i::after {
+.faq_question ul li input[type="checkbox"]:checked ~ i::after {
 	transform: translate(-2px, 0) rotate(-45deg);
 }
 
